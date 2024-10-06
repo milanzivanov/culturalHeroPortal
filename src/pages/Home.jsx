@@ -12,9 +12,9 @@ function Home() {
           <div className="flex items-center">
             <Link
               to="/blogovi"
-              className="flex items-center rounded-sm bg-blue-500 px-4 py-2 text-xl tracking-wide text-stone-200 hover:bg-blue-600"
+              className="flex items-center rounded-sm bg-blue-500 px-4 py-2 text-xl tracking-wide text-stone-200 transition-colors duration-300 hover:bg-blue-600 focus:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:bg-blue-600"
             >
-              <span className="mr-3 text-lg">Duh pokreće tvar</span>
+              <span className="text-semibold mr-3">Duh pokreće tvar</span>
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

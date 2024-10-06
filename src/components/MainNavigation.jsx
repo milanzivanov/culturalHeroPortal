@@ -1,8 +1,12 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
-import logoImage from "/favicon.jpg";
+import logoImage from "/kulturniHerojTempLogo.jpg";
 
 function MainNavigation() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  console.log(location);
+
   return (
     <header className="bg-slate-200">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-0">
@@ -12,16 +16,33 @@ function MainNavigation() {
         <nav>
           <ul className="text-md flex space-x-3 md:text-lg lg:space-x-5">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" className={currentPath === "/" ? "active" : ""}>
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/blogovi">Naslovi</NavLink>
+              <NavLink
+                to="/blogovi"
+                className={currentPath === "/blogovi" ? "active" : ""}
+              >
+                Naslovi
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/onama">O nama</NavLink>
+              <NavLink
+                to="/onama"
+                className={currentPath === "/onama" ? "active" : ""}
+              >
+                O nama
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/kontakt">Kontakt</NavLink>
+              <NavLink
+                to="/kontakt"
+                className={currentPath === "/kontakt" ? "active" : ""}
+              >
+                Kontakt
+              </NavLink>
             </li>
           </ul>
         </nav>
