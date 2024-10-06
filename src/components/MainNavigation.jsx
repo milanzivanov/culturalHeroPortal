@@ -1,11 +1,12 @@
 import { NavLink, Link, useLocation } from "react-router-dom";
 
-import logoImage from "/kulturniHerojTempLogo.jpg";
+import logoImage from "/images/kulturniHerojTempLogo.jpg";
 
 function MainNavigation() {
   const location = useLocation();
-  const currentPath = location.pathname;
-  console.log(location);
+  let currentPath = location.pathname;
+
+  console.log(currentPath);
 
   return (
     <header className="bg-slate-200">

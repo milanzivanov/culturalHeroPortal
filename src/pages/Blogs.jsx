@@ -1,7 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
-import { formatDate } from "../services/formatDate";
+// import { useEffect, useState } from "react";
+// import supabase from "../services/supabaseClient";
+
 import { useLoaderData, Link } from "react-router-dom";
 import { getBlogs } from "../services/apiGetData";
+import { formatDate } from "../services/formatDate";
 
 export async function loader() {
   const blogs = await getBlogs();
@@ -10,16 +13,73 @@ export async function loader() {
 
 function Blogs() {
   const blogs = useLoaderData();
-
   // console.log(blogs);
+
+  // category filter
+  // const [currentCategory, setCurrentCategory] = useState("all");
+  // const [filterBlogs, setFilterBlogs] = useState([]);
+
+  // useEffect(
+  //   function () {
+  //     let query = supabase.from("blogs").select();
+
+  //     if (currentCategory !== "all") {
+  //       query = query.eq("category", currentCategory);
+  //     }
+
+  //     async function getCategorys() {
+  //       const { data: filterBlogs, error } = await query
+  //         .order("created_at", {
+  //           ascending: false,
+  //         })
+  //         .limit(100);
+
+  //       // console.log(error);
+  //       // console.log(blogs);
+
+  //       if (!error) {
+  //         setFilterBlogs(filterBlogs);
+  //       } else {
+  //         alert("There was a problem getting data!!!");
+  //       }
+  //       // setIsLoading(false);
+
+  //       console.log(filterBlogs);
+  //     }
+  //     getCategorys();
+  //   },
+  //   [currentCategory],
+  // );
+
+  // console.log(currentCategory);
 
   return (
     <div className="mx-auto max-w-7xl">
       <div className="mx-auto max-w-2xl px-5 py-5 md:px-0 lg:mx-0">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Naslovi
-        </h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">Duh pokreće tvar</p>
+        <div>
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Naslovi
+            </h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Duh pokreće tvar
+            </p>
+          </div>
+          {/* <div>
+            <select value={currentCategory}>
+              <option>Izaberi rubriku:</option>
+              {blogs.map((category) => (
+                <option
+                  key={category.id}
+                  onChange={() => setCurrentCategory(category.category)}
+                  value={category.category}
+                >
+                  {category.category}
+                </option>
+              ))}
+            </select>
+          </div> */}
+        </div>
       </div>
 
       {/* with grid */}

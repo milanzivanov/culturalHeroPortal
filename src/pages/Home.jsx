@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="relative flex h-[calc(100vh-80px)] items-center justify-center bg-[url('/fotelja.jpg')] bg-cover bg-right md:bg-center">
+    <div className="relative flex h-[calc(100vh-80px)] items-center justify-center bg-[url('/images/fotelja.jpg')] bg-cover bg-right md:bg-center">
       <div className="absolute inset-0 bg-slate-700 bg-opacity-50 lg:bg-opacity-30"></div>
       <div className="bg-opacity-150 relative z-10 flex w-full bg-slate-400 bg-opacity-10 px-5 py-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col">
