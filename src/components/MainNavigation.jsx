@@ -10,7 +10,7 @@ function MainNavigation() {
         <Link className="pr-2" to="/">
           <img src={logoImage} alt="main header logo" />
         </Link>
-        <nav>
+        <nav className="hidden md:block">
           <ul className="text-md flex space-x-3 md:text-lg lg:space-x-5">
             <li>
               <NavLink to="/">Home</NavLink>
@@ -26,6 +26,22 @@ function MainNavigation() {
             </li>
           </ul>
         </nav>
+        <div className="flex items-center md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 9h16.5m-16.5 6.75h16.5"
+            />
+          </svg>
+        </div>
       </div>
     </header>
   );

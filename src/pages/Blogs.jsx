@@ -27,43 +27,40 @@ function Blogs() {
   const blogs = useLoaderData();
   // console.log(blogs);
 
-  // category filter
+  // filter
   const [currentCategory, setCurrentCategory] = useState("all");
 
   function filterBlogsByCategory(blogs, selectedCategory) {
     if (selectedCategory === "all") {
       return blogs;
     }
-
     return blogs.filter((blog) => blog.category === selectedCategory);
   }
-
   const filteredBlogs = filterBlogsByCategory(blogs, currentCategory);
-
-  // console.log("filtered", filteredBlogs);
 
   return (
     <div className="mx-auto max-w-7xl">
       <div className="mx-auto px-5 py-5 md:px-0 lg:mx-0">
         <div className="flex items-center justify-between bg-slate-50 p-5">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Naslovi
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              {currentCategory === "all" ? "Svi naslovi" : `${currentCategory}`}
             </h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-              Duh pokreće tvar
-            </p>
           </div>
           <div>
             <select
-              className="w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+              className="w-full rounded border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
               value={currentCategory}
               onChange={(e) => setCurrentCategory(e.target.value)}
-              aria-label="Select category" // Added for accessibility
+              aria-label="izaberi rubriku" // Added for accessibility
             >
               <option value="all">Izaberi rubriku:</option>
               {CATEGORIES.map((category) => (
-                <option key={category.name} value={category.name}>
+                <option
+                  key={category.name}
+                  value={category.name}
+                  style={{ color: category.color }}
+                >
                   {category.name}
                 </option>
               ))}
