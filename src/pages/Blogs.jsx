@@ -1,13 +1,25 @@
 /* eslint-disable react-refresh/only-export-components */
-// import { useEffect, useState } from "react";
-// import supabase from "../services/supabaseClient";
+import { useState } from "react";
 
 import { useLoaderData, Link } from "react-router-dom";
 import { getBlogs } from "../services/apiGetData";
 import { formatDate } from "../services/formatDate";
 
+const CATEGORIES = [
+  { name: "all", color: "#f97316" },
+  { name: "Čas anatomije", color: "#3b82f6" },
+  { name: "Nova proza", color: "#16a34a" },
+  { name: "Vizuali", color: "#ef4444" },
+  { name: "Pomenik", color: "#eab308" },
+  // { name: "entertainment", color: "#db2777" },
+  // { name: "health", color: "#14b8a6" },
+  // { name: "history", color: "#f97316" },
+  // { name: "news", color: "#8b5cf6" },
+];
+
 export async function loader() {
   const blogs = await getBlogs();
+  console.log(blogs);
   return blogs;
 }
 
@@ -16,47 +28,24 @@ function Blogs() {
   // console.log(blogs);
 
   // category filter
-  // const [currentCategory, setCurrentCategory] = useState("all");
-  // const [filterBlogs, setFilterBlogs] = useState([]);
+  const [currentCategory, setCurrentCategory] = useState("all");
 
-  // useEffect(
-  //   function () {
-  //     let query = supabase.from("blogs").select();
+  function filterBlogsByCategory(blogs, selectedCategory) {
+    if (selectedCategory === "all") {
+      return blogs;
+    }
 
-  //     if (currentCategory !== "all") {
-  //       query = query.eq("category", currentCategory);
-  //     }
+    return blogs.filter((blog) => blog.category === selectedCategory);
+  }
 
-  //     async function getCategorys() {
-  //       const { data: filterBlogs, error } = await query
-  //         .order("created_at", {
-  //           ascending: false,
-  //         })
-  //         .limit(100);
+  const filteredBlogs = filterBlogsByCategory(blogs, currentCategory);
 
-  //       // console.log(error);
-  //       // console.log(blogs);
-
-  //       if (!error) {
-  //         setFilterBlogs(filterBlogs);
-  //       } else {
-  //         alert("There was a problem getting data!!!");
-  //       }
-  //       // setIsLoading(false);
-
-  //       console.log(filterBlogs);
-  //     }
-  //     getCategorys();
-  //   },
-  //   [currentCategory],
-  // );
-
-  // console.log(currentCategory);
+  // console.log("filtered", filteredBlogs);
 
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="mx-auto max-w-2xl px-5 py-5 md:px-0 lg:mx-0">
-        <div>
+      <div className="mx-auto px-5 py-5 md:px-0 lg:mx-0">
+        <div className="flex items-center justify-between bg-slate-50 p-5">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Naslovi
@@ -65,26 +54,27 @@ function Blogs() {
               Duh pokreće tvar
             </p>
           </div>
-          {/* <div>
-            <select value={currentCategory}>
-              <option>Izaberi rubriku:</option>
-              {blogs.map((category) => (
-                <option
-                  key={category.id}
-                  onChange={() => setCurrentCategory(category.category)}
-                  value={category.category}
-                >
-                  {category.category}
+          <div>
+            <select
+              className="w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+              value={currentCategory}
+              onChange={(e) => setCurrentCategory(e.target.value)}
+              aria-label="Select category" // Added for accessibility
+            >
+              <option value="all">Izaberi rubriku:</option>
+              {CATEGORIES.map((category) => (
+                <option key={category.name} value={category.name}>
+                  {category.name}
                 </option>
               ))}
             </select>
-          </div> */}
+          </div>
         </div>
       </div>
 
       {/* with grid */}
       <div className="mb-5 grid grid-cols-1 gap-5 rounded bg-slate-50 p-5 md:grid-cols-2 lg:grid-cols-3">
-        {blogs.map((blog) => (
+        {filteredBlogs.map((blog) => (
           <article
             className="rounded bg-white p-5 shadow-sm hover:bg-slate-100"
             key={blog.id}
