@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 
-import logoImage from "/images/kulturniHerojTempLogo.jpg";
+import logoImage from "/images/logo.jpg";
 
 function MainNavigation() {
   return (
