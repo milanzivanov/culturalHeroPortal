@@ -32,7 +32,7 @@ function BlogItem() {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-5xl">
         <div className="bg-white p-5 shadow-sm md:py-10">
           {blog.data_json.map((data) => (
             <div key={data.id} className="pb-10">

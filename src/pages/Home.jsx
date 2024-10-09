@@ -9,6 +9,7 @@ function Home() {
           <h1 className="mb-5 text-[1.75rem] font-extrabold uppercase leading-snug tracking-widest text-stone-200 md:mb-10 md:text-5xl lg:text-7xl">
             Kulturni heroj
           </h1>
+          {/* <p>{import.meta.env.VITE_PUBLIC_SUPABASE_ANON_KEY}</p> */}
           <div className="flex items-center">
             <Link
               to="/blogovi"
