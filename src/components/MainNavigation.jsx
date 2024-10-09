@@ -5,7 +5,6 @@ import logoImage from "/images/logo.jpg";
 function MainNavigation() {
   return (
     <header className="bg-slate-200">
-      {/* bg-slate-100 */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-5">
         <Link className="pr-2" to="/">
           <img src={logoImage} alt="main header logo" />
@@ -26,7 +25,7 @@ function MainNavigation() {
             </li>
           </ul>
         </nav>
-        <div className="flex items-center md:hidden">
+        <div className="flex cursor-pointer items-center md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
