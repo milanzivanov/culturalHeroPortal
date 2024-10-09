@@ -11,10 +11,6 @@ const CATEGORIES = [
   { name: "Nova proza", color: "#16a34a" },
   { name: "Vizuali", color: "#8b5cf6" },
   { name: "Pomenik", color: "#eab308" },
-  // { name: "entertainment", color: "#db2777" },
-  // { name: "health", color: "#14b8a6" },
-  // { name: "history", color: "#f97316" },
-  // { name: "news", color: "#8b5cf6" },
 ];
 
 export async function loader() {
