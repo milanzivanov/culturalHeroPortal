@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 
-function MobileNavigation() {
+function MobileNavigation({ menuToggle }) {
   return (
-    <div className="absolute inset-0 z-20 hidden bg-slate-700 text-white">
-      <nav className="relative flex h-full w-full items-center justify-center">
+    <div
+      className={`absolute inset-0 z-20 bg-slate-700 text-white ${menuToggle ? "block" : "hidden"}`}
+    >
+      <nav className="relative flex h-[calc(100dvh-80px)] items-center justify-center">
         <ul className="flex flex-col space-y-5 text-lg">
           <li>
             <NavLink to="/">Home</NavLink>

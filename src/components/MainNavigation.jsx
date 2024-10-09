@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { MenuToggleContext } from "../context/MenuToggleContext";
+
 import { NavLink, Link } from "react-router-dom";
 
 import logoImage from "/images/logo.jpg";
 
 function MainNavigation() {
+  const { menuToggle, toggleMenu } = useContext(MenuToggleContext);
+
   return (
     <header className="bg-slate-200">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-5">
@@ -25,21 +30,41 @@ function MainNavigation() {
             </li>
           </ul>
         </nav>
-        <div className="flex cursor-pointer items-center md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 9h16.5m-16.5 6.75h16.5"
-            />
-          </svg>
+        <div
+          className="flex cursor-pointer items-center md:hidden"
+          onClick={toggleMenu}
+        >
+          {menuToggle ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
+              />
+            </svg>
+          )}
         </div>
       </div>
     </header>
