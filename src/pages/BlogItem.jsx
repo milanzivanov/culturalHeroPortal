@@ -10,14 +10,13 @@ export async function loader({ params }) {
 
 function BlogItem() {
   const blog = useLoaderData();
-  console.log(blog);
 
   return (
     <div>
       <div className="bg-slate-300 py-5 md:py-16">
         <div className="mx-auto flex max-w-7xl flex-col justify-center rounded-md p-5 md:flex md:flex-row">
           <img
-            className="mb-5 w-[25vh] rounded-md"
+            className="mb-5 w-full rounded-md md:w-[25vh]"
             src={blog.img}
             alt={blog.title}
           />

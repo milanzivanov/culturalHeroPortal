@@ -35,9 +35,9 @@ function Blogs() {
   return (
     <div className="mx-auto max-w-7xl">
       <div className="mx-auto px-5 py-5 md:px-0 lg:mx-0">
-        <div className="flex items-center justify-between bg-slate-50 p-5 shadow-sm">
+        <div className="flex items-center justify-between bg-slate-200 p-5 shadow-sm">
           <div>
-            <h2 className="text-xl font-bold tracking-tight text-gray-900 lg:text-3xl">
+            <h2 className="text-lg font-bold tracking-tight text-gray-900 lg:text-3xl">
               {currentCategory === "all" ? "Svi naslovi" : `${currentCategory}`}
             </h2>
           </div>
@@ -64,7 +64,7 @@ function Blogs() {
       </div>
 
       {/* with grid */}
-      <div className="mb-5 grid grid-cols-1 gap-5 rounded bg-slate-50 p-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-5 grid grid-cols-1 gap-5 rounded bg-slate-200 p-5 md:grid-cols-2 lg:grid-cols-3">
         {filteredBlogs.map((blog) => (
           <article
             className="rounded bg-white p-5 shadow-sm hover:bg-slate-100"

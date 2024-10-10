@@ -3,7 +3,7 @@ import { MenuToggleContext } from "../context/MenuToggleContext";
 
 import { Outlet, useNavigation } from "react-router-dom";
 
-import MainNavigation from "../components/MainNavigation";
+import MainHeader from "../components/MainHeader";
 import MobileNavigation from "../components/MobileNavigation";
 import Loader from "../components/Loader";
 
@@ -16,9 +16,18 @@ function RootLayout() {
 
   return (
     <>
-      <MainNavigation />
-      <main className="relative">
-        {isLoading && <Loader />}
+      <header className="fixed left-0 right-0 top-0 z-20 w-full bg-slate-200">
+        <MainHeader />
+      </header>
+      <main className="relative mt-[80px]">
+        {isLoading && (
+          <div className="absolute inset-0 z-20 bg-slate-700 bg-opacity-90">
+            <div className="flex h-full items-center justify-center">
+              <Loader />
+            </div>
+          </div>
+        )}
+
         <MobileNavigation
           menuToggle={menuToggle}
           toggleMenu={toggleMenu}
