@@ -27,11 +27,13 @@ const router = createBrowserRouter([
         path: "/blogovi",
         element: <Blogs />,
         loader: blogsLoader,
+        errorElement: <Error />,
       },
       {
         path: "/blogovi/:blogId",
         element: <BlogItem />,
         loader: blogLoader,
+        errorElement: <Error />,
       },
       { path: "/onama", element: <About /> },
       { path: "/kontakt", element: <Contact /> },

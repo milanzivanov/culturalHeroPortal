@@ -21,7 +21,7 @@ function RootLayout() {
       </header>
       <main className="relative mt-[80px]">
         {isLoading && (
-          <div className="absolute inset-0 z-20 bg-slate-700 bg-opacity-90">
+          <div className="absolute inset-0 z-20 bg-slate-700/90 backdrop-blur-sm">
             <div className="flex h-full items-center justify-center">
               <Loader />
             </div>
