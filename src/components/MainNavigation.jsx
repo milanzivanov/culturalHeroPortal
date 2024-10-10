@@ -9,7 +9,7 @@ function MainNavigation() {
   const { menuToggle, toggleMenu } = useContext(MenuToggleContext);
 
   return (
-    <header className="bg-slate-200">
+    <header className="w-full bg-slate-200">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-5">
         <Link className="pr-2" to="/">
           <img src={logoImage} alt="main header logo" />
