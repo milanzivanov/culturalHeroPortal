@@ -6,7 +6,7 @@ function About() {
       <div className="relative">
         <div className="relative h-[40vh] bg-[url('/images/polica1.jpg')] bg-cover bg-right bg-no-repeat">
           <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-start">
-            <h1 className="p-5 text-3xl font-bold text-slate-200 lg:text-5xl">
+            <h1 className="p-5 text-3xl font-extrabold tracking-wide text-slate-200 lg:text-5xl">
               Manifest heroja
             </h1>
           </div>

@@ -7,7 +7,7 @@ function MobileNavigation({ menuToggle, handleLinkClick }) {
       className={`fixed z-20 h-full w-full bg-slate-700 text-white ${menuToggle ? "block" : "hidden"}`}
     >
       <nav className="relative flex h-[calc(100dvh-80px)] items-center justify-center">
-        <ul className="flex flex-col space-y-5 text-lg">
+        <ul className="flex flex-col space-y-7 text-2xl">
           <li onClick={handleLinkClick}>
             <NavLink to="/">Home</NavLink>
           </li>
