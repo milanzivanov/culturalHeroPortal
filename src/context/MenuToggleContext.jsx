@@ -11,9 +11,13 @@ export const MenuToggleProvider = ({ children }) => {
     setMenuToggle((menuToggle) => !menuToggle);
   }
 
+  const handleLinkClick = () => {
+    setMenuToggle(false);
+  };
+
   return (
     <MenuToggleContext.Provider
-      value={{ menuToggle, setMenuToggle, toggleMenu }}
+      value={{ menuToggle, setMenuToggle, toggleMenu, handleLinkClick }}
     >
       {children}
     </MenuToggleContext.Provider>

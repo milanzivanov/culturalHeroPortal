@@ -16,16 +16,16 @@ function MainNavigation() {
         </Link>
         <nav className="hidden md:block">
           <ul className="text-md flex space-x-3 md:text-lg lg:space-x-5">
-            <li>
+            <li className="cursor-pointer">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <NavLink to="/blogovi">Naslovi</NavLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <NavLink to="/onama">O nama</NavLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <NavLink to="/kontakt">Kontakt</NavLink>
             </li>
           </ul>

@@ -15,15 +15,13 @@ const CATEGORIES = [
 
 export async function loader() {
   const blogs = await getBlogs();
-  console.log(blogs);
   return blogs;
 }
 
 function Blogs() {
   const blogs = useLoaderData();
-  // console.log(blogs);
 
-  // filter
+  // sorting by category
   const [currentCategory, setCurrentCategory] = useState("all");
 
   function filterBlogsByCategory(blogs, selectedCategory) {
