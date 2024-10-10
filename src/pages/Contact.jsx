@@ -6,7 +6,7 @@ function Contact() {
       <div className="relative">
         <div className="relative h-[50vh] bg-[url('/images/knjige.jpg')] bg-cover bg-right bg-no-repeat">
           <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-start">
-            <h1 className="text-pretty p-5 text-3xl font-extrabold tracking-wide text-slate-200 lg:text-5xl">
+            <h1 className="text-pretty p-5 text-2xl font-extrabold tracking-wide text-slate-200 lg:text-5xl">
               <span className="mb-0 block md:mb-2">Kontaktiraj </span>
               <span className="block">kulturnog heroja</span>
             </h1>
