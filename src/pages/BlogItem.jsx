@@ -11,6 +11,20 @@ export async function loader({ params }) {
 function BlogItem() {
   const blog = useLoaderData();
 
+  // test
+  // const fetcher = useFetcher();
+
+  // useEffect(
+  //   function () {
+  //     if (!fetcher.data && fetcher.state === "idle") {
+  //       fetcher.load(`/blogovi`);
+  //     }
+  //   },
+  //   [fetcher],
+  // );
+
+  // console.log(fetcher.data);
+
   return (
     <div>
       <div className="bg-slate-300 py-5 md:py-16">

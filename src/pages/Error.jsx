@@ -1,5 +1,4 @@
 import { useRouteError, Link } from "react-router-dom";
-import MainNavigation from "../components/MainHeader";
 
 function Error() {
   const error = useRouteError();
@@ -7,7 +6,6 @@ function Error() {
 
   return (
     <div>
-      <MainNavigation />
       <div className="mx-auto flex h-[calc(100vh-80px)] max-w-7xl items-center justify-center">
         <div className="flex items-center justify-between rounded-md bg-slate-200 p-5">
           <div className="flex flex-col justify-start">

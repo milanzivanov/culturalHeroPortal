@@ -17,16 +17,36 @@ function MainNavigation() {
       <nav className="hidden md:block">
         <ul className="text-md flex space-x-3 md:text-lg lg:space-x-5">
           <li className="cursor-pointer">
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
           </li>
           <li className="cursor-pointer">
-            <NavLink to="/blogovi">Naslovi</NavLink>
+            <NavLink
+              to="/blogovi"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Naslovi
+            </NavLink>
           </li>
           <li className="cursor-pointer">
-            <NavLink to="/onama">O nama</NavLink>
+            <NavLink
+              to="/onama"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              O nama
+            </NavLink>
           </li>
           <li className="cursor-pointer">
-            <NavLink to="/kontakt">Kontakt</NavLink>
+            <NavLink
+              to="/kontakt"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Kontakt
+            </NavLink>
           </li>
         </ul>
       </nav>

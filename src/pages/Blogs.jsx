@@ -35,7 +35,7 @@ function Blogs() {
   return (
     <div className="mx-auto max-w-7xl">
       <div className="mx-auto px-5 py-5 md:px-0 lg:mx-0">
-        <div className="flex items-center justify-between bg-slate-200 p-5 shadow-sm">
+        <div className="flex items-center justify-between rounded-md bg-slate-200 p-5 shadow-sm">
           <div>
             <h2 className="text-lg font-bold tracking-tight text-gray-900 lg:text-3xl">
               {currentCategory === "all" ? "Svi naslovi" : `${currentCategory}`}
@@ -43,7 +43,7 @@ function Blogs() {
           </div>
           <div>
             <select
-              className="w-full rounded border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+              className="w-full rounded-md border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
               value={currentCategory}
               onChange={(e) => setCurrentCategory(e.target.value)}
               aria-label="izaberi rubriku"
@@ -64,14 +64,14 @@ function Blogs() {
       </div>
 
       {/* with grid */}
-      <div className="mb-5 grid grid-cols-1 gap-5 rounded bg-slate-200 p-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-5 grid grid-cols-1 gap-5 rounded-md bg-slate-200 p-5 md:grid-cols-2 lg:grid-cols-3">
         {filteredBlogs.map((blog) => (
           <article
-            className="rounded bg-white p-5 shadow-sm hover:bg-slate-100"
+            className="rounded-md bg-white p-5 shadow-sm hover:bg-slate-100"
             key={blog.id}
           >
             <Link to={`/blogovi/${blog.id}`}>
-              <div className="mb-5 rounded">
+              <div className="mb-5 rounded-md">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime={blog.created_at} className="text-gray-500">
                     {formatDate(blog.created_at)}
