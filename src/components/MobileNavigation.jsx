@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 
-function MobileNavigation({ menuToggle, handleLinkClick }) {
+function MobileNavigation({ isMenuOpen, handleLinkClick }) {
   return (
     <div
-      className={`fixed z-20 h-full w-full bg-slate-700 text-white ${menuToggle ? "block" : "hidden"}`}
+      className={`fixed z-20 h-full w-full bg-slate-700 text-white ${isMenuOpen ? "block" : "hidden"}`}
     >
       <nav className="relative flex h-[calc(100dvh-80px)] items-center justify-center">
         <ul className="flex flex-col space-y-7 text-2xl">

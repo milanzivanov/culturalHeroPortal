@@ -8,7 +8,7 @@ import MobileNavigation from "../components/MobileNavigation";
 import Loader from "../components/Loader";
 
 function RootLayout() {
-  const { menuToggle, toggleMenu, handleLinkClick } =
+  const { isMenuOpen, toggleMenu, handleLinkClick } =
     useContext(MenuToggleContext);
 
   const navigation = useNavigation();
@@ -16,7 +16,7 @@ function RootLayout() {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-20 w-full bg-slate-200">
+      <header className="fixed left-0 right-0 top-0 z-20 w-full bg-slate-200 shadow-sm">
         <MainHeader />
       </header>
       <main className="relative mt-[80px]">
@@ -29,7 +29,7 @@ function RootLayout() {
         )}
 
         <MobileNavigation
-          menuToggle={menuToggle}
+          isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
           handleLinkClick={handleLinkClick}
         />

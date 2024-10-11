@@ -6,7 +6,7 @@ import { NavLink, Link } from "react-router-dom";
 import logoImage from "/images/logo.jpg";
 
 function MainNavigation() {
-  const { menuToggle, toggleMenu } = useContext(MenuToggleContext);
+  const { isMenuOpen, toggleMenu } = useContext(MenuToggleContext);
 
   return (
     <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-5">
@@ -33,7 +33,7 @@ function MainNavigation() {
         className="flex cursor-pointer items-center md:hidden"
         onClick={toggleMenu}
       >
-        {menuToggle ? (
+        {isMenuOpen ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

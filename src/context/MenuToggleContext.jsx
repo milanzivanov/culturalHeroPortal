@@ -5,19 +5,19 @@ export const MenuToggleContext = createContext();
 
 // Context provider component
 export const MenuToggleProvider = ({ children }) => {
-  const [menuToggle, setMenuToggle] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
-    setMenuToggle((menuToggle) => !menuToggle);
+    setIsMenuOpen((menuToggle) => !menuToggle);
   }
 
   const handleLinkClick = () => {
-    setMenuToggle(false);
+    setIsMenuOpen(false);
   };
 
   return (
     <MenuToggleContext.Provider
-      value={{ menuToggle, setMenuToggle, toggleMenu, handleLinkClick }}
+      value={{ isMenuOpen, setIsMenuOpen, toggleMenu, handleLinkClick }}
     >
       {children}
     </MenuToggleContext.Provider>
