@@ -15,6 +15,9 @@ function Contact() {
         </div>
         <div className="mx-auto flex h-full max-w-7xl flex-col">
           <div className="relative z-10 rounded-md p-5">
+            <h2 className="py-5 text-2xl font-bold text-gray-700 md:text-3xl">
+              Kontakt
+            </h2>
             <p className="text-grey-600 text-md mb-5 md:text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus illo porro dignissimos! Corporis nobis dolore
