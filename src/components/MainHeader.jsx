@@ -6,11 +6,12 @@ import { NavLink, Link } from "react-router-dom";
 import logoImage from "/images/logo.jpg";
 
 function MainNavigation() {
-  const { isMenuOpen, toggleMenu } = useContext(MenuToggleContext);
+  const { isMenuOpen, toggleMenu, handleLinkClick } =
+    useContext(MenuToggleContext);
 
   return (
     <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-5">
-      <Link className="pr-2" to="/">
+      <Link className="pr-2" to="/" onClick={handleLinkClick}>
         <img src={logoImage} alt="main header logo" />
       </Link>
       <nav className="hidden md:block">
