@@ -73,10 +73,13 @@ function Blogs() {
             <Link to={`/blogovi/${blog.id}`}>
               <div className="mb-5 rounded-md">
                 <div className="flex items-center gap-x-4 text-xs">
-                  <time dateTime={blog.created_at} className="text-gray-500">
+                  <time
+                    dateTime={blog.created_at}
+                    className="font-semibold text-gray-900"
+                  >
                     {formatDate(blog.created_at)}
                   </time>
-                  <p className="relative z-10 rounded-full bg-sky-100 px-3 py-1.5 text-gray-600">
+                  <p className="relative z-10 rounded-full bg-sky-100 px-3 py-1.5 text-gray-500">
                     {blog.category}
                   </p>
                 </div>

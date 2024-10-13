@@ -1,14 +1,5 @@
 import supabase from "./supabaseClient";
 
-// export async function getBlogs() {
-//   const { data, error } = await supabase
-//     .from("blogs")
-//     .select()
-//     .order("created_at", { ascending: false });
-
-//   return data;
-// }
-
 export async function getBlogs() {
   try {
     const { data, error } = await supabase
