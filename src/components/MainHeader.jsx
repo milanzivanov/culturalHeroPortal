@@ -3,7 +3,7 @@ import { MenuToggleContext } from "../context/MenuToggleContext";
 
 import { NavLink, Link } from "react-router-dom";
 
-import logoImage from "/images/logo.jpg";
+import logoImage from "/images/logo.png";
 
 function MainNavigation() {
   const { isMenuOpen, toggleMenu, handleLinkClick } =
