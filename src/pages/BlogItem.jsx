@@ -11,19 +11,40 @@ export async function loader({ params }) {
 function BlogItem() {
   const blog = useLoaderData();
 
-  // test
-  // const fetcher = useFetcher();
+  // Helper function to render text body
+  const renderTextBody = (textBody) => {
+    return textBody.map((entry) => (
+      <p
+        key={entry.created_at}
+        className="pb-5 text-sm leading-6 text-gray-700 md:text-lg"
+      >
+        {entry.text}
+      </p>
+    ));
+  };
 
-  // useEffect(
-  //   function () {
-  //     if (!fetcher.data && fetcher.state === "idle") {
-  //       fetcher.load(`/blogovi`);
-  //     }
-  //   },
-  //   [fetcher],
-  // );
+  // Helper function to render blog text sections
+  const renderBlogSections = () => {
+    return blog.data_text.map((section) => (
+      <div key={section.id} className="pb-10">
+        {renderTextBody(section.text_body)}
+      </div>
+    ));
+  };
 
-  // console.log(fetcher.data);
+  // rendering the literature list
+  const renderLiteratureItems = (data) => {
+    if (data.literature.length === 0) {
+      return <p key={data.id}>Nije dostavljena nikakava literatura</p>;
+    }
+
+    return data.literature.map((literature, index) => (
+      <li key={literature.id} className="pb-2 text-sm leading-6 text-gray-700">
+        <span className="font-bold">{index + 1}</span> -{" "}
+        {literature.literature_title}
+      </li>
+    ));
+  };
 
   return (
     <div>
@@ -45,9 +66,11 @@ function BlogItem() {
           </div>
         </div>
       </div>
+
+      {/* Blog Content */}
       <div className="mx-auto max-w-5xl">
         <div className="bg-white p-5 shadow-sm md:py-10">
-          {blog.data_json.map((data) => (
+          {blog.data_text.map((data) => (
             <div key={data.id} className="pb-10">
               {data.text_body.map((data) => (
                 <p
@@ -57,23 +80,15 @@ function BlogItem() {
                   {data.text}
                 </p>
               ))}
-              <ul>
-                <h3 className="pb-1 text-lg font-semibold">Literatura</h3>
-                {data.literature.length !== 0 ? (
-                  data.literature.map((literature, i) => (
-                    <li
-                      key={literature.id}
-                      className="pb-2 text-sm leading-6 text-gray-700"
-                    >
-                      {i + 1} - {literature.literature_title}
-                    </li>
-                  ))
-                ) : (
-                  <p>Nije dostupna nikakava literatura</p>
-                )}
-              </ul>
             </div>
           ))}
+
+          <ul>
+            <h3 className="pb-1 text-lg font-semibold">Literatura</h3>
+            {blog.literature_data.map((literature) =>
+              renderLiteratureItems(literature),
+            )}
+          </ul>
 
           <div className="flex justify-end">
             <Link
