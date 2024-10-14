@@ -7,7 +7,7 @@ import { MenuToggleProvider } from "./context/MenuToggleContext";
 
 import Home from "./pages/Home";
 import Blogs, { loader as blogsLoader } from "./pages/Blogs";
-import BlogItem, { loader as blogLoader } from "./pages/BlogItem";
+import Blog, { loader as blogLoader } from "./pages/Blog";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogovi/:blogId",
-        element: <BlogItem />,
+        element: <Blog />,
         loader: blogLoader,
         errorElement: <Error />,
       },

@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      poppins: ["Poppins", "monospace"],
+      // poppins: ["Poppins", "monospace"],
       // sans: ["Poppins", "monospace"],
     },
 

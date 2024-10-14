@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="relative flex h-[calc(100dvh-80px)] items-center justify-center bg-[url('/images/fotelja.jpg')] bg-cover bg-right bg-no-repeat md:bg-center">
-      <div className="absolute inset-0 bg-slate-700/50 lg:bg-slate-700/30"></div>
-      <div className="relative z-10 flex w-full bg-slate-400 bg-opacity-10 px-5 py-10">
+      <div className="absolute inset-0 bg-slate-700/50 lg:bg-slate-700/40"></div>
+      <div className="relative z-10 flex w-full bg-slate-400 bg-opacity-25 px-5 py-10 md:bg-opacity-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col">
-          <h1 className="font-poppins mb-5 text-[1.7rem] font-extrabold uppercase tracking-widest text-stone-200 md:mb-10 md:text-5xl lg:text-7xl">
+          <h1 className="mb-5 font-poppins text-[1.7rem] font-extrabold uppercase tracking-widest text-stone-200 md:mb-5 md:text-5xl lg:text-6xl">
             Kulturni heroj
           </h1>
+          <h2 className="w-full text-pretty pb-10 text-[.8rem] leading-5 text-stone-200 md:w-[70%] md:text-2xl md:leading-6">
+            „Istina je jedna, mudraci o njoj govore različitim imenima...“
+            <span className="block">Džozef Kembel</span>
+          </h2>
           <div className="flex items-center">
             <Link
               to="/blogovi"
