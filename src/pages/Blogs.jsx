@@ -15,6 +15,7 @@ const CATEGORIES = [
 
 export async function loader() {
   const blogs = await getBlogs();
+
   return blogs;
 }
 
@@ -97,12 +98,12 @@ function Blogs() {
                   <img
                     src={blog.avatar}
                     alt={blog.title}
-                    className="h-10 w-10 rounded-full bg-gray-50"
+                    className="h-10 w-10 rounded-full bg-[#e9e9e9] shadow-md grayscale backdrop-grayscale-0"
                   />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-gray-900">
                       <span className="absolute inset-0"></span>
-                      {blog.author}
+                      {blog.author_name}
                     </p>
                     <p className="text-gray-600">Autor / saradnik</p>
                   </div>

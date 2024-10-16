@@ -35,3 +35,17 @@ export async function getBlog(id) {
     return { error: "Failed to fetch blog" };
   }
 }
+
+// testing
+export async function getTest() {
+  try {
+    let { data: test, error } = await supabase.from("test").select("*");
+    if (error) {
+      throw new Error(`Error fetching test: ${error.message}`);
+    }
+    return test;
+  } catch (error) {
+    console.error("Error fetching test:", error);
+    return { error: "Failed to fetch test" };
+  }
+}

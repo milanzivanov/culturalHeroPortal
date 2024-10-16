@@ -14,7 +14,7 @@ export async function loader({ params }) {
 function BlogItem() {
   const blog = useLoaderData();
 
-  // console.log(blog);
+  console.log(blog);
 
   return (
     <div>
@@ -31,7 +31,7 @@ function BlogItem() {
             </h1>
             <p className="text-sm text-gray-700 md:text-lg">
               (Autor:
-              <span className="font-semibold"> {blog.author}</span>)
+              <span className="font-semibold"> {blog.author_name}</span>)
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ function BlogItem() {
       {/* Blog Content */}
       <div className="mx-auto max-w-7xl">
         <div className="bg-white p-5 shadow-sm md:py-10">
-          {console.log(blog.data_text[0].text_body)}
+          {/* {console.log(blog.data_text[0].text_body)} */}
           {blog.data_text[0].text_body.map((data) => (
             // console.log(data),
             <div key={data.id} className="pb-5">
