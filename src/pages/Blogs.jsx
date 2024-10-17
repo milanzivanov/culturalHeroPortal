@@ -35,8 +35,8 @@ function Blogs() {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="mx-auto px-5 py-5 md:px-0 lg:mx-0">
-        <div className="flex items-center justify-between rounded-md bg-slate-200 p-5 shadow-sm">
+      <div className="mx-auto pb-0 pt-5 md:px-0 md:py-5 lg:mx-0">
+        <div className="flex items-center justify-between rounded-none bg-slate-200 p-5 shadow-sm md:rounded-md">
           <div>
             <h2 className="text-lg font-bold tracking-tight text-gray-900 lg:text-3xl">
               {currentCategory === "all" ? "Svi naslovi" : `${currentCategory}`}
@@ -44,7 +44,7 @@ function Blogs() {
           </div>
           <div>
             <select
-              className="w-full rounded-md border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+              className="w-full rounded-md border border-gray-300 bg-white p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
               value={currentCategory}
               onChange={(e) => setCurrentCategory(e.target.value)}
               aria-label="izaberi rubriku"
@@ -65,10 +65,10 @@ function Blogs() {
       </div>
 
       {/* with grid */}
-      <div className="mb-5 grid grid-cols-1 gap-5 rounded-md bg-slate-200 p-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-5 grid grid-cols-1 gap-5 rounded-none bg-slate-200 p-0 md:grid-cols-2 md:rounded-md md:p-5 lg:grid-cols-3">
         {filteredBlogs.map((blog) => (
           <article
-            className="rounded-md bg-white p-5 shadow-sm hover:bg-slate-100"
+            className="rounded-none bg-white p-5 shadow-md hover:bg-slate-100 md:rounded-md"
             key={blog.id}
           >
             <Link to={`/blogovi/${blog.id}`}>
@@ -80,16 +80,16 @@ function Blogs() {
                   >
                     {formatDate(blog.created_at)}
                   </time>
-                  <p className="relative z-10 rounded-full bg-sky-100 px-3 py-1.5 text-gray-500">
+                  <p className="relative z-10 rounded-full bg-sky-100 px-3 py-1.5 text-gray-700">
                     {blog.category}
                   </p>
                 </div>
 
                 <div className="py-5">
-                  <h2 className="mb-5 text-pretty py-2 text-lg font-semibold leading-6 text-gray-900">
+                  <h2 className="mb-2 text-pretty py-2 text-lg font-semibold leading-6 text-gray-900">
                     {blog.title}
                   </h2>
-                  <p className="line-clamp-3 text-pretty text-sm leading-6 text-gray-600">
+                  <p className="line-clamp-3 text-pretty text-sm leading-5 text-gray-600 md:leading-6">
                     {blog.title_body}
                   </p>
                 </div>
@@ -98,9 +98,9 @@ function Blogs() {
                   <img
                     src={blog.avatar}
                     alt={blog.title}
-                    className="h-10 w-10 rounded-full bg-[#e9e9e9] shadow-md grayscale backdrop-grayscale-0"
+                    className="h-12 w-12 rounded-full border-2 border-gray-300 bg-[#e9e9e9] shadow-md grayscale backdrop-grayscale-0"
                   />
-                  <div className="text-sm leading-6">
+                  <div className="text-sm leading-5 md:leading-6">
                     <p className="font-semibold text-gray-900">
                       <span className="absolute inset-0"></span>
                       {blog.author_name}
