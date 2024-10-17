@@ -89,7 +89,7 @@ function About() {
 
                     <p className="text-grey-700 word-wrap mb-5 text-sm">
                       U slobodno vreme razvija sajtove poput Kulturnog heroja i
-                      uči tehnologije iz IT svere koje ga zanimaju...
+                      uči tehnologije iz IT sfere koje ga zanimaju...
                     </p>
 
                     <a
