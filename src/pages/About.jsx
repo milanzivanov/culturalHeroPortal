@@ -107,7 +107,7 @@ function About() {
         </div>
 
         <div className="mx-auto mb-10 flex h-full max-w-7xl flex-col">
-          <div className="relative z-10 px-5 md:px-0">
+          <div className="relative z-10 px-5 pb-7 md:px-0 md:pb-16">
             <h2 className="pb-8 pt-14 text-2xl font-bold text-gray-700 md:text-3xl">
               Naš fokus
             </h2>
