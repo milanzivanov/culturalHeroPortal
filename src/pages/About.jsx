@@ -17,8 +17,8 @@ function About() {
 
         <div className="mx-auto flex h-full max-w-7xl flex-col">
           <div className="relative z-10">
-            <h2 className="px-5 pb-8 pt-14 text-2xl font-bold leading-6 text-gray-700 md:px-0 md:text-3xl">
-              Kulturno-herojsku posadu čine:
+            <h2 className="px-5 pb-8 pt-14 text-xl font-bold uppercase leading-6 tracking-wide text-gray-700 md:px-0 md:text-2xl">
+              Kulturno-herojsku posadu čine
             </h2>
 
             <div>
@@ -27,7 +27,7 @@ function About() {
                 <div className="mb-0 flex flex-col items-start rounded-none bg-slate-100 p-5 shadow-md md:rounded-md">
                   <div className="mb-7 flex items-center space-x-5">
                     <img
-                      className="w-16 rounded-full border-2 border-gray-300 bg-[#e9e9e9] shadow-md grayscale backdrop-grayscale-0 md:w-32"
+                      className="w-16 rounded-full bg-[#e9e9e9] shadow-md grayscale backdrop-grayscale-0 md:w-32"
                       src="https://fcyrimjuwctjvvoijrqi.supabase.co/storage/v1/object/sign/cultural-hero-images/avatars/aeksandarAhab2.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjdWx0dXJhbC1oZXJvLWltYWdlcy9hdmF0YXJzL2Fla3NhbmRhckFoYWIyLndlYnAiLCJpYXQiOjE3MjkxMTY1NjYsImV4cCI6MTg4Njc5NjU2Nn0.CA5OaFjxUDMh_Ej9vdNQAsHowHNLoDOKr2oN3CcUV60&t=2024-10-16T22%3A09%3A25.448Z"
                       alt="a. radovic"
                     />
@@ -36,7 +36,7 @@ function About() {
                       <h3 className="text-lg font-semibold italic text-gray-700 md:text-xl">
                         Aleksandar Radović
                       </h3>
-                      <h4 className="text-xs font-semibold text-gray-700 md:text-lg">
+                      <h4 className="text-xs font-semibold text-gray-500 md:text-base">
                         Urednik tekstova
                       </h4>
                     </div>
@@ -66,7 +66,7 @@ function About() {
                 <div className="flex flex-col items-start rounded-md bg-slate-100 p-5 shadow-md">
                   <div className="mb-7 flex items-center space-x-5">
                     <img
-                      className="w-16 rounded-full border-2 border-gray-300 grayscale backdrop-grayscale-0 md:w-32"
+                      className="w-16 rounded-full grayscale backdrop-grayscale-0 md:w-32"
                       src="https://fcyrimjuwctjvvoijrqi.supabase.co/storage/v1/object/sign/cultural-hero-images/avatars/mickoVelicanstveni.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjdWx0dXJhbC1oZXJvLWltYWdlcy9hdmF0YXJzL21pY2tvVmVsaWNhbnN0dmVuaS53ZWJwIiwiaWF0IjoxNzI5MTAxNzI5LCJleHAiOjE4ODY3ODE3Mjl9.GzJkTz4DAYHj4agN1fzhpcFD4fvveDQbqT6hntJ1NIc&t=2024-10-16T18%3A02%3A09.069Z"
                       alt="m. zivanov"
                     />
@@ -75,7 +75,7 @@ function About() {
                       <h3 className="text-lg font-semibold italic text-gray-900 md:text-xl">
                         Milan Živanov
                       </h3>
-                      <h4 className="text-xs font-semibold text-gray-700 md:text-lg">
+                      <h4 className="text-xs font-semibold text-gray-500 md:text-base">
                         Tehnička služba sajta
                       </h4>
                     </div>
@@ -83,7 +83,7 @@ function About() {
                   <div>
                     <p className="text-grey-700 text-sp word-wrap mb-5">
                       Strukovni inženjer grafičkog inženjerstva sa primesama
-                      dizajna. Diplomirao na Visoko tehičkoj školi strukovnih
+                      dizajna. Diplomirao na Visokoj tehičkoj školi strukovnih
                       studija u Novom Sadu.
                     </p>
 
@@ -108,7 +108,7 @@ function About() {
 
         <div className="mx-auto mb-10 flex h-full max-w-7xl flex-col">
           <div className="relative z-10 px-5 pb-7 md:px-0 md:pb-16">
-            <h2 className="pb-8 pt-14 text-2xl font-bold text-gray-700 md:text-3xl">
+            <h2 className="pb-8 pt-14 text-xl font-bold uppercase leading-6 tracking-wide text-gray-700 md:text-2xl">
               Naš fokus
             </h2>
             <p className="text-grey-600 text-md mb-5 md:text-lg">
@@ -134,7 +134,7 @@ function About() {
               Sajt, na osnovu rubrika{" "}
               <span className="font-semibold italic text-gray-700">
                 (Čas anatomije; Knjigohranilište; Manuskript; Vizuali; Pomenik;
-                Nova proza; Sakrali, Živa Reč; Antropos i Tehnos...)
+                Nova proza; Sakrali i Živa Reč...)
               </span>
               nastoji da (re)afirmiše „vreme prošlo u vremenu sadašnjem za vreme
               buduće“.
