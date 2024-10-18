@@ -22,12 +22,12 @@ function About() {
             </h2>
 
             <div>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
                 {/* 1 */}
                 <div className="mb-0 flex flex-col items-start rounded-none bg-slate-100 p-5 shadow-md md:rounded-md">
                   <div className="mb-7 flex items-center space-x-5">
                     <img
-                      className="w-16 rounded-full bg-[#e9e9e9] shadow-md grayscale backdrop-grayscale-0 md:w-32"
+                      className="w-16 rounded-full bg-[#222] shadow-md grayscale backdrop-grayscale-0 md:w-24"
                       src="https://fcyrimjuwctjvvoijrqi.supabase.co/storage/v1/object/sign/cultural-hero-images/avatars/aeksandarAhab2.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjdWx0dXJhbC1oZXJvLWltYWdlcy9hdmF0YXJzL2Fla3NhbmRhckFoYWIyLndlYnAiLCJpYXQiOjE3MjkxMTY1NjYsImV4cCI6MTg4Njc5NjU2Nn0.CA5OaFjxUDMh_Ej9vdNQAsHowHNLoDOKr2oN3CcUV60&t=2024-10-16T22%3A09%3A25.448Z"
                       alt="a. radovic"
                     />
@@ -62,12 +62,56 @@ function About() {
                     </p>
                   </div>
                 </div>
+
                 {/* 2 */}
                 <div className="flex flex-col items-start rounded-md bg-slate-100 p-5 shadow-md">
                   <div className="mb-7 flex items-center space-x-5">
                     <img
-                      className="w-16 rounded-full grayscale backdrop-grayscale-0 md:w-32"
-                      src="https://fcyrimjuwctjvvoijrqi.supabase.co/storage/v1/object/sign/cultural-hero-images/avatars/mickoVelicanstveni.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjdWx0dXJhbC1oZXJvLWltYWdlcy9hdmF0YXJzL21pY2tvVmVsaWNhbnN0dmVuaS53ZWJwIiwiaWF0IjoxNzI5MTAxNzI5LCJleHAiOjE4ODY3ODE3Mjl9.GzJkTz4DAYHj4agN1fzhpcFD4fvveDQbqT6hntJ1NIc&t=2024-10-16T18%3A02%3A09.069Z"
+                      className="w-16 rounded-full bg-[#222] grayscale backdrop-grayscale-0 md:w-24"
+                      src="https://fcyrimjuwctjvvoijrqi.supabase.co/storage/v1/object/sign/cultural-hero-images/avatars/milosZubacTransparentBg.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjdWx0dXJhbC1oZXJvLWltYWdlcy9hdmF0YXJzL21pbG9zWnViYWNUcmFuc3BhcmVudEJnLndlYnAiLCJpYXQiOjE3MjkyNjMzNzYsImV4cCI6MTg4Njk0MzM3Nn0.EpHkEGPZEXliIobiiNKQm3WM1zLviMo-ZPGbyUV4IB4&t=2024-10-18T14%3A56%3A15.857Z"
+                      alt="m. zubac"
+                    />
+
+                    <div>
+                      <h3 className="text-lg font-semibold italic text-gray-900 md:text-xl">
+                        Miloš Zubac
+                      </h3>
+                      <h4 className="text-xs font-semibold text-gray-500 md:text-base">
+                        Urednik tekstova
+                      </h4>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-grey-700 text-sp word-wrap mb-5">
+                      Miloš Zubac je srpski književnik i muzičar iz Novog Sada.
+                      Pesnik, esejista, kantautor i scenski pripovedač. Pokretač
+                      je i jedan od aktera južnoslovenskog muzičkog kolektiva
+                      Novi Odmetnici.
+                    </p>
+
+                    <p className="text-grey-700 word-wrap mb-5 text-sm">
+                      Samosvojan ali i saboran ‒ dosledno je naklonjen
+                      stvaralačkim partnerstvima u književnosti i muzici.
+                      Miloševe pesme izvodili su ili snimali brojni kantautori i
+                      sastavi iz regiona.
+                    </p>
+
+                    <a
+                      className="font-semibold text-gray-700"
+                      href="https://miloszubac.blogspot.com/"
+                      target="_blank"
+                    >
+                      miloszubac.blogspot.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* 3 */}
+                <div className="flex flex-col items-start rounded-md bg-slate-100 p-5 shadow-md">
+                  <div className="mb-7 flex items-center space-x-5">
+                    <img
+                      className="w-16 rounded-full bg-[#222] grayscale backdrop-grayscale-0 md:w-24"
+                      src="https://fcyrimjuwctjvvoijrqi.supabase.co/storage/v1/object/sign/cultural-hero-images/avatars/milanTransparent.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjdWx0dXJhbC1oZXJvLWltYWdlcy9hdmF0YXJzL21pbGFuVHJhbnNwYXJlbnQud2VicCIsImlhdCI6MTcyOTI2NDU0MywiZXhwIjoxODg2OTQ0NTQzfQ.ExqbPt3RjVLh5UdYyu-FGztr9D-wW2il8rqcaOjCKqI&t=2024-10-18T15%3A15%3A42.751Z"
                       alt="m. zivanov"
                     />
 
@@ -97,7 +141,7 @@ function About() {
                       href="https://milanzivanov.com"
                       target="_blank"
                     >
-                      www.milanzivanov.com
+                      milanzivanov.com
                     </a>
                   </div>
                 </div>
