@@ -165,7 +165,7 @@ function About() {
                         Milan Živanov
                       </h3>
                       <h4 className="text-xs font-semibold text-gray-500 md:text-base">
-                        Tehnička služba sajta
+                        Tehnička služba portala
                       </h4>
                     </div>
                   </div>
