@@ -5,11 +5,11 @@ function Contact() {
     <>
       <div className="relative">
         <div className="bg-slate-700/50 lg:bg-slate-700/30"></div>
-        <div className="relative h-[calc(100vh-80px)] bg-[url('/images/knjige.jpg')] bg-cover bg-right bg-no-repeat">
+        <div className="relative h-[calc(100vh-71px)] bg-[url('/images/knjige.jpg')] bg-cover bg-right bg-no-repeat">
           <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-start">
             <div className="flex overflow-hidden rounded-md bg-gray-700/20 p-2">
               <img
-                className="hidden w-1/3 grayscale backdrop-grayscale-0 md:flex"
+                className="hidden w-1/4 grayscale backdrop-grayscale-0 md:flex"
                 src={logoImage}
                 alt="conection"
               />
