@@ -138,7 +138,11 @@ function About() {
                       Redovno objavljuje u stručnoj periodici radove iz nauke o
                       književnosti, ali i digitalne humanistike, bibliotekarstva
                       i informacionih nauka i Кnowledge Management-a. Jedan je
-                      od osnivača portala „Кulturni heroj“.
+                      od osnivača portala{" "}
+                      <span className="font-medium italic">
+                        „Кulturni heroj“
+                      </span>
+                      .
                     </p>
 
                     <p className="font-semibold text-gray-700">
