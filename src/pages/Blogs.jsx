@@ -35,8 +35,8 @@ function Blogs() {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="mx-auto pb-0 pt-5 md:px-0 md:py-5 lg:mx-0">
-        <div className="flex items-center justify-between rounded-none bg-slate-200 p-5 shadow-sm md:rounded-md">
+      <div className="mx-auto pb-0 md:px-0 md:py-5 lg:mx-0">
+        <div className="flex items-center justify-between rounded-none border-b-2 bg-transparent p-5 shadow-sm md:rounded-md md:border-b-0 md:bg-slate-200">
           <div>
             <h2 className="text-lg font-bold tracking-tight text-gray-900 lg:text-3xl">
               {currentCategory === "all" ? "Svi naslovi" : `${currentCategory}`}
@@ -44,10 +44,11 @@ function Blogs() {
           </div>
           <div>
             <select
-              className="w-full rounded-md border border-gray-300 bg-white p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+              className="w-full cursor-pointer rounded-sm bg-white p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+              id="categoryId"
               value={currentCategory}
               onChange={(e) => setCurrentCategory(e.target.value)}
-              aria-label="izaberi rubriku"
+              required
             >
               <option value="all">Izaberi rubriku:</option>
               {CATEGORIES.map((category) => (
@@ -65,10 +66,10 @@ function Blogs() {
       </div>
 
       {/* with grid */}
-      <div className="mb-5 grid grid-cols-1 gap-3 rounded-none bg-slate-200 p-0 md:grid-cols-2 md:gap-5 md:rounded-md md:p-5 lg:grid-cols-3">
+      <div className="mb-5 grid grid-cols-1 gap-0 rounded-none bg-slate-200 p-0 md:grid-cols-2 md:gap-5 md:rounded-md md:p-5 lg:grid-cols-3">
         {filteredBlogs.map((blog) => (
           <article
-            className="rounded-none bg-white p-5 shadow-md hover:bg-slate-100 md:rounded-md"
+            className="rounded-none border-b-2 bg-white p-5 shadow-md hover:bg-slate-100 md:rounded-md md:border-b-0"
             key={blog.id}
           >
             <Link to={`/blogovi/${blog.id}`}>
