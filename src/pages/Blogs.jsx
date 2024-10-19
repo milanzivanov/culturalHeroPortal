@@ -65,7 +65,7 @@ function Blogs() {
       </div>
 
       {/* with grid */}
-      <div className="mb-5 grid grid-cols-1 gap-5 rounded-none bg-slate-200 p-0 md:grid-cols-2 md:rounded-md md:p-5 lg:grid-cols-3">
+      <div className="mb-5 grid grid-cols-1 gap-3 rounded-none bg-slate-200 p-0 md:grid-cols-2 md:gap-5 md:rounded-md md:p-5 lg:grid-cols-3">
         {filteredBlogs.map((blog) => (
           <article
             className="rounded-none bg-white p-5 shadow-md hover:bg-slate-100 md:rounded-md"
