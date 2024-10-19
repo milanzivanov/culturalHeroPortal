@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <div className="relative">
-        <div className="relative h-[60vh] bg-[url('/images/polica1.jpg')] bg-cover bg-right bg-no-repeat">
+        <div className="relative h-[30vh] bg-[url('/images/polica1.jpg')] bg-cover bg-right bg-no-repeat">
           <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-start">
             <h1 className="text-pretty p-5 text-2xl font-extrabold tracking-wide text-slate-200 lg:text-5xl">
               <span className="mb-0 block md:mb-2">Manifest </span>
@@ -22,7 +22,7 @@ function About() {
             </h2>
 
             <div>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 {/* 1 */}
                 <div className="mb-0 flex flex-col items-start rounded-none bg-slate-100 p-5 shadow-md md:rounded-md">
                   <div className="mb-7 flex items-center space-x-5">
@@ -105,8 +105,49 @@ function About() {
                     </a>
                   </div>
                 </div>
-
                 {/* 3 */}
+
+                <div className="flex flex-col items-start rounded-md bg-slate-100 p-5 shadow-md">
+                  <div className="mb-7 flex items-center space-x-5">
+                    <img
+                      className="w-16 rounded-full bg-[#222] grayscale backdrop-grayscale-0 md:w-24"
+                      src="https://fcyrimjuwctjvvoijrqi.supabase.co/storage/v1/object/sign/cultural-hero-images/avatars/vasilijeTransparent.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjdWx0dXJhbC1oZXJvLWltYWdlcy9hdmF0YXJzL3Zhc2lsaWplVHJhbnNwYXJlbnQud2VicCIsImlhdCI6MTcyOTMzNjI3MiwiZXhwIjoxODg3MDE2MjcyfQ.mMNP-ME58hPzckhdeXIwCqjZ-WzR5Dv8dXqQs2TX6Q8&t=2024-10-19T11%3A11%3A12.926Z"
+                      alt="v. milnovic"
+                    />
+
+                    <div>
+                      <h3 className="text-lg font-semibold italic text-gray-900 md:text-xl">
+                        Vasilije Milnović
+                      </h3>
+                      <h4 className="text-xs font-semibold text-gray-500 md:text-base">
+                        Urednik tekstova
+                      </h4>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-grey-700 text-sp word-wrap mb-5">
+                      Vasilije Milnović je rođen u Novom Sadu 1978. godine, gde
+                      se i školovao. Doktorirao je na novosadskom Filozofskom
+                      fakultetu na temu „Pitanje tradicije u kontekstu srpske
+                      avangarde“.
+                    </p>
+
+                    <p className="text-grey-700 word-wrap mb-5 text-sm">
+                      Trenutno obavlja funkciju rukovodioca Centra za nauku
+                      Univerzitetske biblioteke „Svetozar Marković“ u Beogradu.
+                      Redovno objavljuje u stručnoj periodici radove iz nauke o
+                      književnosti, ali i digitalne humanistike, bibliotekarstva
+                      i informacionih nauka i Кnowledge Management-a. Jedan je
+                      od osnivača portala „Кulturni heroj“.
+                    </p>
+
+                    <p className="font-semibold text-gray-700">
+                      milnovic@unilib.rs
+                    </p>
+                  </div>
+                </div>
+
+                {/* 4 */}
                 <div className="flex flex-col items-start rounded-md bg-slate-100 p-5 shadow-md">
                   <div className="mb-7 flex items-center space-x-5">
                     <img
