@@ -4,7 +4,9 @@ export async function getBlogs() {
   try {
     const { data, error } = await supabase
       .from("blogs")
-      .select()
+      .select(
+        "id, created_at, blog_title, blog_text, categories(id, category_name, category_bg), members(member_name, member_avatar)",
+      )
       .order("created_at", { ascending: false });
 
     if (error) {
@@ -21,8 +23,10 @@ export async function getBlogs() {
 export async function getBlog(id) {
   try {
     const { data, error } = await supabase
-      .from(`blogs`)
-      .select()
+      .from("blogs")
+      .select(
+        "id, created_at, blog_title, blog_text, blog_img, categories(category_name, category_bg), members(member_name, member_avatar), blog_body_posts",
+      )
       .eq("id", id)
       .single();
     if (error) {
@@ -33,19 +37,5 @@ export async function getBlog(id) {
   } catch (error) {
     console.error("Error fetching blog:", error);
     return { error: "Failed to fetch blog" };
-  }
-}
-
-// testing
-export async function getTest() {
-  try {
-    let { data: test, error } = await supabase.from("test").select("*");
-    if (error) {
-      throw new Error(`Error fetching test: ${error.message}`);
-    }
-    return test;
-  } catch (error) {
-    console.error("Error fetching test:", error);
-    return { error: "Failed to fetch test" };
   }
 }
