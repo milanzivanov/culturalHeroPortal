@@ -16,7 +16,7 @@ function RootLayout() {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-20 w-full bg-slate-200 shadow-sm">
+      <header className="fixed left-0 right-0 top-0 z-20 w-full bg-[red] shadow-sm">
         <MainHeader />
       </header>
       <main className="relative mt-[71px]">
