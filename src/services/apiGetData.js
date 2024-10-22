@@ -5,7 +5,7 @@ export async function getBlogs() {
     const { data, error } = await supabase
       .from("blogs")
       .select(
-        "id, created_at, blog_title, blog_text, categories(id, category_name, category_bg), members(member_name, member_avatar)",
+        "*, categories(id, category_name, category_bg), members(member_name, member_avatar)",
       )
       .order("created_at", { ascending: false });
 
@@ -25,7 +25,7 @@ export async function getBlog(id) {
     const { data, error } = await supabase
       .from("blogs")
       .select(
-        "id, created_at, blog_title, blog_text, blog_img, categories(category_name, category_bg), members(member_name, member_avatar), blog_body_posts",
+        "*, categories(category_name, category_bg), members(member_name, member_avatar)",
       )
       .eq("id", id)
       .single();

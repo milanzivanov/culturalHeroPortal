@@ -2,8 +2,8 @@
 import { useLoaderData, Link } from "react-router-dom";
 import { getBlog } from "../services/apiGetData";
 
-// import BlogEndnote from "../components/BlogEndnote";
-// import BlogLiterature from "../components/BlogLiterature";
+import BlogEndnote from "../components/BlogEndnote";
+import BlogLiterature from "../components/BlogLiterature";
 
 export async function loader({ params }) {
   const id = params.blogId;
@@ -14,7 +14,7 @@ export async function loader({ params }) {
 function BlogItem() {
   const blog = useLoaderData();
 
-  // console.log(blog);
+  console.log(blog);
 
   return (
     <div>
@@ -41,10 +41,10 @@ function BlogItem() {
       {/* Blog Content */}
       <div className="mx-auto max-w-7xl">
         <div className="bg-white p-5 shadow-sm md:py-10">
-          {/* {console.log(blog.blog_body_posts[0].blog_posts)} */}
-          {blog.blog_body_posts[0].blog_posts.map((data) => (
+          {/* {console.log(.blog_posts)} */}
+          {blog.blog_body_posts.map((data) => (
             // console.log(data),
-            <div key={data.id} className="pb-5">
+            <div key={data.created_at} className="pb-5">
               <h2 className="pb-2 text-lg font-semibold">{data.blog_title}</h2>
               <p className="text-sm leading-6 text-gray-700 md:text-lg">
                 {data.blog_text}
@@ -53,10 +53,10 @@ function BlogItem() {
           ))}
 
           {/* Endnotes Section */}
-          {/* <BlogEndnote blogEndnoteData={blog} /> */}
+          <BlogEndnote blogEndnoteData={blog} />
 
           {/* Literature Section */}
-          {/* <BlogLiterature blogLiteratureData={blog} /> */}
+          <BlogLiterature blogLiteratureData={blog} />
 
           {/* Back to Blogs List Link */}
           <div className="flex justify-end">

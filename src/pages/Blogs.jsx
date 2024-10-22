@@ -26,7 +26,9 @@ function Blogs() {
 
   // sorting by category
   const [currentCategory, setCurrentCategory] = useState("all");
-  const categoryNames = blogs.map((blog) => blog.categories.category_name);
+  const categoryNames = [
+    ...new Set(blogs.map((blog) => blog.categories.category_name)),
+  ];
 
   console.log(categoryNames);
 
@@ -46,7 +48,7 @@ function Blogs() {
         <div className="flex items-center justify-between rounded-none border-b-2 bg-transparent p-5 shadow-sm md:rounded-md md:border-b-0 md:bg-slate-200">
           <div>
             <h2 className="text-lg font-bold tracking-tight text-gray-900 lg:text-3xl">
-              {currentCategory === "all" ? "Svi naslovi" : `${currentCategory}`}
+              {currentCategory === "all" ? "Sve rubrike" : `${currentCategory}`}
             </h2>
           </div>
 
@@ -60,7 +62,7 @@ function Blogs() {
               <option value="all">Sve rubrike</option>
 
               {categoryNames.map((category) => (
-                <option key={category.name} value={category.name}>
+                <option key={category.id} value={category.name}>
                   {category}
                 </option>
               ))}
@@ -72,9 +74,8 @@ function Blogs() {
       {/* with grid */}
       <div className="mb-5 grid grid-cols-1 gap-0 rounded-none bg-slate-200 p-0 md:grid-cols-2 md:gap-5 md:rounded-md md:p-5 lg:grid-cols-3">
         {filteredBlogs.map((blog) => (
-          // {blogs.map((blog) => (
           <article
-            className="rounded-none border-b-2 bg-white p-5 shadow-md last:shadow-none hover:bg-slate-100 md:rounded-md md:border-b-0 md:shadow-md md:last:shadow-md"
+            className="rounded-none border-b-2 bg-white p-5 shadow-md last:border-b-0 last:shadow-none hover:bg-slate-100 md:rounded-md md:border-b-0 md:shadow-md md:last:shadow-md"
             key={blog.id}
           >
             <Link to={`/blogovi/${blog.id}`}>
