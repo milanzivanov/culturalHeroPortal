@@ -4,6 +4,7 @@ import { getBlog } from "../services/apiGetData";
 
 import BlogEndnote from "../components/BlogEndnote";
 import BlogLiterature from "../components/BlogLiterature";
+import BlogFootnote from "../components/BlogFootnote";
 
 export async function loader({ params }) {
   const id = params.blogId;
@@ -57,6 +58,8 @@ function BlogItem() {
 
           {/* Literature Section */}
           <BlogLiterature blogLiteratureData={blog} />
+
+          <BlogFootnote blogFootnoteData={blog} />
 
           {/* Back to Blogs List Link */}
           <div className="flex justify-end">

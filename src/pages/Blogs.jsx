@@ -5,14 +5,6 @@ import { useLoaderData, Link } from "react-router-dom";
 import { getBlogs } from "../services/apiGetData";
 import { formatDate } from "../services/formatDate";
 
-// const CATEGORIES = [
-//   { name: "all", color: "#f97316" },
-//   { name: "Čas anatomije", color: "#3b82f6" },
-//   { name: "Nova proza", color: "#16a34a" },
-//   { name: "Vizuali", color: "#8b5cf6" },
-//   { name: "Pomenik", color: "#eab308" },
-// ];
-
 export async function loader() {
   const blogs = await getBlogs();
 
@@ -24,7 +16,7 @@ function Blogs() {
 
   console.log(blogs);
 
-  // sorting by category
+  // sorting by category without duplicates
   const [currentCategory, setCurrentCategory] = useState("all");
   const categoryNames = [
     ...new Set(blogs.map((blog) => blog.categories.category_name)),
@@ -84,6 +76,7 @@ function Blogs() {
                   <time
                     dateTime={blog.created_at}
                     className="font-semibold text-gray-900"
+                    style={{ color: blog.categories.category_bg }}
                   >
                     {formatDate(blog.created_at)}
                   </time>

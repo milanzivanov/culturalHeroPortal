@@ -20,7 +20,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <Error />,
     children: [
       { index: true, element: <Home /> },
       {
@@ -38,6 +37,7 @@ const router = createBrowserRouter([
       { path: "/onama", element: <About /> },
       { path: "/kontakt", element: <Contact /> },
     ],
+    errorElement: <Error />,
   },
 ]);
 
