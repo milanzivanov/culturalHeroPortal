@@ -50,6 +50,9 @@ function BlogItem() {
               <p className="text-sm leading-6 text-gray-700 md:text-lg">
                 {data.blog_text}
               </p>
+              <p className="text-sm font-semibold italic leading-6 text-gray-700 md:text-lg">
+                {data.blog_poem}
+              </p>
             </div>
           ))}
 
