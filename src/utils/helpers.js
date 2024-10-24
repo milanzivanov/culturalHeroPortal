@@ -13,7 +13,7 @@ export function formatDate(dateString) {
     "Septembar",
     "Oktobar",
     "Novembar",
-    "Decembar"
+    "Decembar",
   ];
   const month = monthNames[date.getMonth()];
   const year = date.getFullYear();

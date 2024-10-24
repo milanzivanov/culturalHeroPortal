@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { useLoaderData, Link } from "react-router-dom";
 import { getBlogs } from "../services/apiGetData";
-import { formatDate } from "../services/formatDate";
+import { formatDate } from "../utils/helpers";
 
 export async function loader() {
   const blogs = await getBlogs();
@@ -16,13 +16,11 @@ function Blogs() {
 
   console.log(blogs);
 
-  // sorting by category without duplicates
   const [currentCategory, setCurrentCategory] = useState("all");
+  // sorting by category without duplicates
   const categoryNames = [
     ...new Set(blogs.map((blog) => blog.categories.category_name)),
   ];
-
-  console.log(categoryNames);
 
   function filterBlogsByCategory(blogs, selectedCategory) {
     if (selectedCategory === "all") {

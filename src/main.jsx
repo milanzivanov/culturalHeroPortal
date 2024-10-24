@@ -10,6 +10,7 @@ import Blogs, { loader as blogsLoader } from "./pages/Blogs";
 import Blog, { loader as blogLoader } from "./pages/Blog";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Admin from "./pages/AdminLogin";
 import Error from "./pages/Error";
 
 import RootLayout from "./pages/rootLayout";
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       },
       { path: "/onama", element: <About /> },
       { path: "/kontakt", element: <Contact /> },
+      { path: "/admin", element: <Admin /> },
     ],
     errorElement: <Error />,
   },

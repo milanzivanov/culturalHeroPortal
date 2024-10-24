@@ -41,6 +41,9 @@ function MobileNavigation({ isMenuOpen, handleLinkClick, toggleMenu }) {
           <li onClick={handleLinkClick}>
             <NavLink to="/kontakt">Kontakt</NavLink>
           </li>
+          <li onClick={handleLinkClick}>
+            <NavLink to="/admin">Admin</NavLink>
+          </li>
         </ul>
       </nav>
     </div>

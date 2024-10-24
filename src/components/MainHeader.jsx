@@ -16,36 +16,44 @@ function MainNavigation() {
       </Link>
       <nav className="hidden md:block">
         <ul className="text-md flex space-x-3 md:text-lg lg:space-x-5">
-          <li className="cursor-pointer">
+          <li className="cursor-pointer capitalize">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Home
+              home
             </NavLink>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer capitalize">
             <NavLink
               to="/blogovi"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Naslovi
+              naslovi
             </NavLink>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer capitalize">
             <NavLink
               to="/onama"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              O nama
+              o <span className="lowercase">nama</span>
             </NavLink>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer capitalize">
             <NavLink
               to="/kontakt"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Kontakt
+              kontakt
+            </NavLink>
+          </li>
+          <li className="cursor-pointer capitalize">
+            <NavLink
+              to="/admin"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              admin
             </NavLink>
           </li>
         </ul>
