@@ -6,7 +6,7 @@ function Home() {
       <div className="absolute inset-0 bg-slate-700/50 lg:bg-slate-700/40"></div>
       <div className="relative z-10 flex w-full bg-slate-400 bg-opacity-15 px-5 py-10 md:bg-opacity-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col">
-          <h1 className="mb-3 text-[1.65rem] font-black uppercase tracking-widest text-stone-200 md:mb-4 md:text-4xl lg:text-5xl xl:text-6xl">
+          <h1 className="font-robotoBlack mb-3 text-[1.65rem] font-black uppercase tracking-widest text-stone-200 md:mb-4 md:text-4xl lg:text-5xl xl:text-6xl">
             Kulturni heroj
           </h1>
           <h2 className="w-full text-pretty pb-5 text-[.85rem] leading-5 text-stone-200 md:w-[70%] md:pb-10 md:text-2xl md:leading-8">
