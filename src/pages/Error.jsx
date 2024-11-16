@@ -6,7 +6,7 @@ function Error() {
 
   return (
     <div className="bg-black">
-      <div className="mx-auto flex h-[calc(100vh-71px)] max-w-7xl items-center justify-center">
+      <div className="mx-auto flex h-[100dvh] max-w-7xl items-center justify-center">
         <div className="flex items-center justify-between rounded-md bg-slate-200 p-5">
           <div className="flex flex-col justify-start">
             <h1 className="mx-auto mb-5 flex text-5xl font-bold">

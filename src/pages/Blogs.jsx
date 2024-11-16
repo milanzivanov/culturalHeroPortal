@@ -87,10 +87,10 @@ function Blogs() {
                 </div>
 
                 <div className="py-5">
-                  <h2 className="mb-2 text-pretty py-2 text-lg font-semibold leading-6 text-gray-900">
+                  <h2 className="mb-2 text-pretty py-2 text-lg font-semibold italic leading-6 text-gray-900">
                     {blog.blog_title}
                   </h2>
-                  <p className="line-clamp-3 text-pretty text-sm leading-5 text-gray-600 md:leading-6">
+                  <p className="line-clamp-3 text-pretty text-sm italic leading-5 text-gray-600 md:leading-6">
                     {blog.blog_text}
                   </p>
                 </div>
